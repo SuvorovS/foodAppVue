@@ -1,0 +1,14 @@
+.mainPage{
+    width : 40%;
+    min-width: 200px;
+    float: left;
+    user-select: none;
+    background-color: #ccc;
+    padding: 10px;
+    margin-right: 10px; 
+    box-shadow: 0 0 11px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    img {
+        max-width: 100%;
+    }
+}

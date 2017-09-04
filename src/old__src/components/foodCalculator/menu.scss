@@ -1,0 +1,57 @@
+.topMenu{
+    // background-color: red;
+    padding: 10px 0;
+    
+    ul {
+        width: 600px;
+        float: left;
+        // display: inline-block;
+        // background-color: pink;
+        margin: 0;
+        // margin: auto;
+        padding: 0;
+        
+        
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 10px;
+            &:hover {
+                // background: #bc5c5c;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            a {
+                display: block;
+                border-radius: 10px;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 25px;
+                font-weight: 800;
+                font-style: italic;
+                color: black;
+                &:hover {
+                    color: white;
+                    background-color: #000;
+                }
+                // background: green;
+                // display: block;
+
+            }
+        }
+    }
+    .lodin_panel {
+        background-color: red;
+        width: 300px;
+        float: left;
+        text-align: center;
+        line-height: 49px;
+        button {
+            vertical-align: middle;
+            // width: 40px;
+        }
+    }
+}

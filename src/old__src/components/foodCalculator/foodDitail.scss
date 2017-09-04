@@ -1,0 +1,61 @@
+.foodDitail {
+    user-select: none;
+    margin-right: 10px;
+    background-color: #ccc;
+    width : 25%;
+    min-width: 230px;
+    float: left;
+    padding: 10px;
+    // border: 1px solid black;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    h3 {
+        border-radius: 10px;
+        padding: 5px;
+        color: #fff;
+        margin: 0;
+        background-color: #bc5c5c;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+       }
+    .foodDitail_data{
+        p {
+            color:#7d416d;
+            font-size: 18px;
+            font-weight: 800;
+            span {
+                color: #b43a3a;
+                font-weight: 600;
+            }
+            input{
+                width: 40px;
+                border-radius: 5px;
+                outline: none;
+                padding: 2px 5px;
+                color: #b44141;
+                margin-right: 5px;
+                text-align: center;
+                font-size: 18px;
+                &:focus{
+                    box-shadow: 0 0 10px rgba(0, 44, 149, 0.5);
+                }
+            }
+        }
+    }
+    button {
+        width: 100%;
+        border-radius: 10px;
+        outline: none;
+        background-color: #bc5c5c;
+        color: #fff;
+        font-size: 20px;
+        transition: 0.2s;
+        &:hover {
+            transition: 0.2s;
+            font-size: 25px;
+            padding-bottom: 6px;
+            background-color: darken(#bc5c5c, 10%);
+        }
+    }
+}
