@@ -15,18 +15,33 @@ export const state = {
     { id: 2, title: 'яблоко', lipids: 200 },
     { id: 3, title: 'банан', lipids: 300 }
   ],
-  curentFood: [],
+  curentFood: {id: 3, title: 'банан', lipids: 300},
   usedFood: {
     changed: false,
     isFatching: false,
     date: '',
-    items: [
-      { id: 2, title: 'яблоко', lipids: 200 },
-      { id: 3, title: 'банан', lipids: 300 }
-    ]
+    items: {
+      breacfast: [
+        { id: 2, title: 'яблоко', lipids: 200 },
+        { id: 3, title: 'банан', lipids: 300 }
+      ],
+      dinner: [
+        { id: 2, title: 'груша', lipids: 100 },
+        { id: 3, title: 'банан', lipids: 300 }
+      ]
+
+    }
+  }
+}
+
+const mutations = {
+  addToCurentFood (state, payload) {
+    console.log('mutation addToCurentFood', payload)
+    state.curentFood = payload
   }
 }
 
 export default new Vuex.Store({
-  state
+  state,
+  mutations
 })

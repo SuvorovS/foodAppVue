@@ -1,16 +1,18 @@
 <template>
   <div class="foodDetails">
-    <ul>
-      <li>adsfaf</li>
-      <li>asdf</li>
-      <li>asdfsd</li>
-    </ul>
+    {{curent}}
   </div>
 </template>
 
 <script>
   export default {
-    name: 'FoodDetails'
+    name: 'FoodDetails',
+    computed: {
+      curent () {
+              //  this.$store.state.foodList[id]
+        return this.$store.state.curentFood
+      }
+    }
   }
 </script>
 

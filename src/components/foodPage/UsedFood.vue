@@ -11,9 +11,11 @@
     name: 'UsedFood',
     computed: {
       usedFood () {
-        return this.$store.state.usedFood.items
+        let foodType = this.$route.params.type
+        return this.$store.state.usedFood.items[foodType]
       }
-    }
+    },
+    mounted () {}
   }
 </script>
 

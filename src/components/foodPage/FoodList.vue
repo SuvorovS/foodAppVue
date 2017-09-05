@@ -2,13 +2,13 @@
   <div class="foodList">
     {{title}}
     <ul>
-      <li class="foodType" v-for="food in foodList" @click="showFood">{{food.title}}</li>
+      <li class="foodType" v-for="food in foodList" @click="addToCurentFood" :id="food.id">{{food.title}}</li>
     </ul>
   </div>
 </template>
 
 <script>
-  // import { mapState } from 'vuex'
+  // import { mapMutations } from 'vuex'
   export default {
     name: 'FoodList',
     data () {
@@ -22,8 +22,14 @@
       }
     },
     methods: {
-      showFood (e) {
-        console.log('123', e.target)
+      // ...mapMutations([ 'addToCurentFood' ]),
+      // showFood (e) {
+      //   console.log('123', e.target)
+      // },
+      addToCurentFood (e) {
+        let id = e.target.id - 1
+        let payload = this.$store.state.foodList[id]
+        this.$store.commit('addToCurentFood', payload)
       }
     }
   }
