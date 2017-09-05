@@ -17,8 +17,6 @@ export const state = {
   ],
   curentFood: {id: 3, title: 'банан', lipids: 300},
   usedFood: {
-    changed: false,
-    isFatching: false,
     date: '',
     items: {
       breacfast: [
@@ -28,8 +26,9 @@ export const state = {
       dinner: [
         { id: 2, title: 'груша', lipids: 100 },
         { id: 3, title: 'банан', lipids: 300 }
-      ]
-
+      ],
+      lunch: [],
+      supper: []
     }
   }
 }
@@ -38,6 +37,11 @@ const mutations = {
   addToCurentFood (state, payload) {
     console.log('mutation addToCurentFood', payload)
     state.curentFood = payload
+  },
+  addToUsedFood (state, payload) {
+    // console.log('mutation addToUsedFood', payload)
+    let usedFood = state.usedFood.items[payload.eatingType]
+    usedFood.push(payload.usedFood)
   }
 }
 

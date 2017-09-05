@@ -1,16 +1,24 @@
 <template>
   <div class="foodDetails">
     {{curent}}
+    <div><button @click="add">eat</button></div>
   </div>
 </template>
 
 <script>
+  import {mapMutations} from 'vuex'
   export default {
     name: 'FoodDetails',
     computed: {
       curent () {
-              //  this.$store.state.foodList[id]
         return this.$store.state.curentFood
+      }
+    },
+    methods: {
+      ...mapMutations(['addToUsedFood']),
+      add () {
+        let payload = {eatingType: this.$route.params.type, usedFood: this.curent}
+        this.addToUsedFood(payload)
       }
     }
   }

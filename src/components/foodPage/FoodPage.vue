@@ -8,6 +8,7 @@
     </div>
     <hr>
     <div>{{foodType}}</div>
+    <div><input type="date" name="" id=""></div>
     <div class="food_block">
       <food-list></food-list>
     </div>
@@ -45,7 +46,7 @@
       UsedFood
     },
     mounted () {
-      console.log(this.$store.state.menu)
+      // console.log(this.$store.state.menu)
     }
   }
 </script>
